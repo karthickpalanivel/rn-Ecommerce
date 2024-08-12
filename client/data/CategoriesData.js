@@ -3,7 +3,7 @@ export const categoriesData =[
         _id:1,
         name: "mobile",
         path: 'mobile',
-        icon: 'mobile',
+        icon: 'mobile1',
     },
     {
         _id:2,
@@ -15,31 +15,31 @@ export const categoriesData =[
         _id:3,
         name: 'desktop',
         path: 'desktop',
-        icon: 'desktop',
+        icon: 'windowso',
     },
     {
         _id: 4,
         name: 'tablet',
         path: 'tablet',
-        icon: 'tablet',
+        icon: 'tablet1',
     },
     {
         _id: 5,
         name: 'tv',
         path: 'tv',
-        icon: 'tv',
+        icon: 'iconfontdesktop',
     },
     {
         _id: 6,
         name: 'headphones',
         path: 'headphones',
-        icon: 'headphones',
+        icon: 'customerservice',
     },
     {
         _id: 7,
         name: 'accessories',
         path: 'accessories',
-        icon: 'list',
+        icon: 'shoppingcart',
     },
 
 ];

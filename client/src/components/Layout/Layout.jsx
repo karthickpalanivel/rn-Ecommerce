@@ -1,18 +1,22 @@
-import { View, Text } from "react-native";
+import { View } from "react-native";
 import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { StatusBar } from "expo-status-bar";
 import Categories from "../category/Categories";
+import Banner from "../banner/Banner";
+import Product from "../products/Product";
 
 const Layout = ({ props }) => {
   return (
     <>
-      <StatusBar />
+      <StatusBar style="auto" />
       <Header />
-      <Categories/>
-      <View>{props}</View>
-      <Footer />
+      <View>
+        <Categories />
+      </View>
+      <Banner />
+      <Product />
     </>
   );
 };
