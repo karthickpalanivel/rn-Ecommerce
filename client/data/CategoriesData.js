@@ -31,10 +31,17 @@ export const categoriesData =[
     },
     {
         _id: 6,
+        name: 'headphones',
+        path: 'headphones',
+        icon: 'headphones',
+    },
+    {
+        _id: 7,
         name: 'accessories',
         path: 'accessories',
         icon: 'list',
     },
+
 ];
 
 //serach font awesome and navigate to the first link
