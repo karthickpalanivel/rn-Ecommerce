@@ -21,11 +21,26 @@ const Layout = ({ props }) => {
       </View>
       <Banner />
       <Products />
-      <Footer />
+      <View style={styles.footer}>
+        <Footer />
+      </View>
     </>
   );
 };
 
 export default Layout;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  footer: {
+    display: "flex",
+    width: "100%",
+    justifyContent: "flex-end",
+    zIndex: 100,
+    borderWidth: 1,
+    borderColor: "#ccc",
+    borderColor: "lightgray",
+    position: "absoulte",
+    bottom: 0,
+    padding: 10,
+  },
+});
