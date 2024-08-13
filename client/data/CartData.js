@@ -1,9 +1,7 @@
-export const ProductsData = [
+export const CartData = [
   {
     _id: 1,
-
     name: "Apple iPhone 15 pro plus (256 GB) grey shades",
-    shortName: "Apple iPhone 15 pro plus (256 GB)",
     description:
       "something looks luxury but except camera nothing good, manufactured from china, product by USA, delivered to you, where ever in this world",
     price: "300",

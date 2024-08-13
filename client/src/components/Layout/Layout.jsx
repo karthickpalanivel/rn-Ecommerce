@@ -8,12 +8,14 @@ import Banner from "../banner/Banner";
 import Products from "../products/Products";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "../../screens/Home";
+import DefaultLayout from "./DefaultLayout";
+
 
 const Tab = createBottomTabNavigator();
 
 const Layout = ({ props }) => {
   return (
-    <>
+    <DefaultLayout>
       <StatusBar style="auto" />
       <Header />
       <View>
@@ -21,10 +23,8 @@ const Layout = ({ props }) => {
       </View>
       <Banner />
       <Products />
-      <View style={styles.footer}>
-        <Footer />
-      </View>
-    </>
+      
+    </DefaultLayout>
   );
 };
 

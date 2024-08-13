@@ -4,6 +4,9 @@ import { ProductsData } from "../../../data/ProductsData";
 import Layout from "../Layout/Layout";
 import Header from "../Layout/Header";
 import Categories from "../category/Categories";
+import Footer from "../Layout/Footer";
+import DefaultLayout from "../Layout/DefaultLayout";
+
 
 const ProductDetails = ({ route }) => {
   const [pDetails, setPDetails] = useState({});
@@ -21,15 +24,15 @@ const ProductDetails = ({ route }) => {
     return setQty((prev) => prev + 1);
   };
   const subQty = () => {
-    if (qty <= 0) return;
+    if (qty <= 1) return;
     setQty((prev) => prev - 1);
   };
 
   const { params } = route;
   return (
-    <View style={{ backgroundColor: "white" }}>
-      <Header />
-      <Categories />
+    <DefaultLayout style={{ backgroundColor: "white" }}>
+      
+      
       {/* <Text>ProductDetails {params._id}</Text>
       <Text>{JSON.stringify(pDetails,null,4)}</Text> */}
 
@@ -41,8 +44,14 @@ const ProductDetails = ({ route }) => {
       </View>
 
       <View style={styles.btnContainer}>
-        <TouchableOpacity style={styles.btnCart}>
-          <Text style={{ color: "white" }}>Add to Cart</Text>
+        <TouchableOpacity
+          style={styles.btnCart}
+          onPress={() => alert(`${qty} items added to cart`)}
+          disabled={pDetails?.quantity <= 0}
+        >
+          <Text style={{ color: "white", fontWeight: "bold" }}>
+            {pDetails?.quantity > 0 ? "ADD TO CART" : "OUT OF STOCK"}
+          </Text>
         </TouchableOpacity>
 
         <View style={styles.btnContainer}>
@@ -55,7 +64,9 @@ const ProductDetails = ({ route }) => {
           </TouchableOpacity>
         </View>
       </View>
-    </View>
+      
+    </DefaultLayout>
+
   );
 };
 

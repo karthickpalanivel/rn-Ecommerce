@@ -3,18 +3,19 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "../../screens/Home";
 import AntDesign from "react-native-vector-icons/AntDesign";
-import { useRoute } from "@react-navigation/native";
+import { useRoute, useNavigation } from "@react-navigation/native";
 
 const Tab = createBottomTabNavigator();
 
 const Footer = () => {
   const route = useRoute();
+  const navigation = useNavigation();
 
   const BottomIcon = ({ iconName, displayName }) => {
     return (
       <TouchableOpacity
         style={styles.menuContainer}
-        onPress={() => alert(`switched to ${displayName} page`)}
+        onPress={() => navigation.navigate(displayName)}
       >
         <AntDesign
           name={iconName}
@@ -33,7 +34,7 @@ const Footer = () => {
       <BottomIcon iconName="home" displayName="Home" />
       <BottomIcon iconName="bells" displayName="Notification" />
       <BottomIcon iconName="user" displayName="Profile" />
-      <BottomIcon iconName="shoppingcart" displayName="Orders" />
+      <BottomIcon iconName="shoppingcart" displayName="Cart" />
       <BottomIcon iconName="logout" displayName="Logout" />
     </View>
   );
