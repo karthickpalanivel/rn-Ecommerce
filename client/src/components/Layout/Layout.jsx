@@ -3,9 +3,9 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { StatusBar } from "expo-status-bar";
-import Categories from "../category/Categories";
+import Categories from "../category/Catnodeegories";
 import Banner from "../banner/Banner";
-import Product from "../products/Product";
+import Products from "../products/Products";
 
 const Layout = ({ props }) => {
   return (
@@ -16,7 +16,7 @@ const Layout = ({ props }) => {
         <Categories />
       </View>
       <Banner />
-      <Product />
+      <Products />
     </>
   );
 };
