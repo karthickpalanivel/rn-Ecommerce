@@ -14,7 +14,9 @@ const Home = () => {
       <Categories />
       <Banner />
       <Products />
-      <Footer />
+      <View style={styles.footer}>
+        <Footer />
+      </View>
     </Layout>
   );
 };
