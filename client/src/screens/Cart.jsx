@@ -10,11 +10,12 @@ import DefaultLayout from "../components/Layout/DefaultLayout";
 import { CartData } from "../../data/CartData";
 import PriceTable from "./cart/PriceTable";
 import CartItem from "./cart/CartItem";
+import Footer from "../components/Layout/Footer";
 
 const Cart = ({ navigation }) => {
   const [cartItems, setCartItems] = useState(CartData);
   return (
-    <DefaultLayout>
+    <View>
       <Text style={sytles.heading}>
         {cartItems?.length > 0
           ? `You have ${cartItems?.length} Item left in your cart`
@@ -43,13 +44,31 @@ const Cart = ({ navigation }) => {
           </View>
         </>
       )}
-    </DefaultLayout>
+      <View style={sytles.footer}>
+        <Footer/>
+      </View>
+    </View>
   );
 };
 
 export default Cart;
 
 const sytles = StyleSheet.create({
+  main: {
+    flex: 'none'
+  },
+  footer: {
+    display: "flex",
+    width: "100%",
+    flex: 1,
+    justifyContent: "flex-end",
+    zIndex: 100,
+    borderTopWidth: 1,
+    borderColor: "lightgray",
+    position: "absolute",
+    bottom: 0,
+    padding: 10,
+  },
   heading: {
     textAlign: "center",
     color: "green",

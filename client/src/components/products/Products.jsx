@@ -5,14 +5,21 @@ import { ProductsData } from "../../../data/ProductsData";
 
 const Products = () => {
   return (
-    <View>
-      {ProductsData?.map((p) => {
-        return <ProductCard key={p._id} props={p} />;
-      })}
+    <View >
+      <View style={styles.container}>
+        {ProductsData?.map((p) => {
+          return <ProductCard key={p._id} props={p} />;
+        })}
+      </View>
     </View>
   );
 };
 
 export default Products;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    justifyContent:"center",
+    alignItems: "center",
+  }
+});

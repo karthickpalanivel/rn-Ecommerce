@@ -2,17 +2,14 @@ import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import Layout from "../components/Layout/Layout";
 import Header from "../components/Layout/Header";
-import Categories from "../components/category/Categories";
-import Banner from "../components/banner/Banner";
 import Products from "../components/products/Products";
 import Footer from "../components/Layout/Footer";
+import DefaultLayout from "../components/Layout/DefaultLayout";
 
 const Home = () => {
   return (
     <Layout>
       <Header />
-      <Categories />
-      <Banner />
       <Products />
       <View style={styles.footer}>
         <Footer />

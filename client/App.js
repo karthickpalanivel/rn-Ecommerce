@@ -6,9 +6,13 @@ import About from "./src/screens/About";
 import ProductDetails from "./src/components/products/ProductDetails";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Cart from "./src/screens/Cart";
+import ProfileScreen from "./src/screens/ProfileScreen";
+import WelcomeScreenOne from "./src/screens/welcomeScreens/WelcomeScreenOne";
+import WelcomeScreenTwo from "./src/screens/welcomeScreens/WelcomeScreenTwo";
+import WelcomeScreenThree from "./src/screens/welcomeScreens/WelcomeScreenThree";
+import CheckOut from "./src/screens/CheckOut";
 
 const Stack = createNativeStackNavigator();
-const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
@@ -21,6 +25,12 @@ export default function App() {
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="ProductDetails" component={ProductDetails} />
         <Stack.Screen name="Cart" component={Cart} />
+        <Stack.Screen name="Profile" component={ProfileScreen} />
+        <Stack.Screen name="WsOne" component={WelcomeScreenOne}/>
+        <Stack.Screen name="WsTwo" component={WelcomeScreenTwo}/>
+        <Stack.Screen name="WsThree" component={WelcomeScreenThree}/>
+        <Stack.Screen name="checkout" component={CheckOut}/>
+
       </Stack.Navigator>
       <StatusBar style="auto" />
     </NavigationContainer>

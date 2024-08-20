@@ -7,7 +7,7 @@ const DefaultLayout = ({ children }) => {
   return (
     <>
       <StatusBar />
-      <View>{children}</View>
+      <View style={styles.container}>{children}</View>
       <View style={styles.footer}>
         <Footer />
       </View>
@@ -18,8 +18,14 @@ const DefaultLayout = ({ children }) => {
 export default DefaultLayout;
 
 const styles = StyleSheet.create({
+  
+  container:{
+    flex: 1,
+    backgroundColor: "#D73C46",
+  },
   footer: {
-    display: 'flex',
+    backgroundColor: 'white',
+    display: "flex",
     width: "100%",
     flex: 1,
     justifyContent: "flex-end",

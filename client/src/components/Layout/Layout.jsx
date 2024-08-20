@@ -3,27 +3,19 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { StatusBar } from "expo-status-bar";
-import Categories from "../category/Categories";
-import Banner from "../banner/Banner";
 import Products from "../products/Products";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "../../screens/Home";
 import DefaultLayout from "./DefaultLayout";
 
-
 const Tab = createBottomTabNavigator();
 
 const Layout = ({ props }) => {
   return (
-    <DefaultLayout>
+    <DefaultLayout style={{ backgroundColor: "#D73C46" }}>
       <StatusBar style="auto" />
       <Header />
-      <View>
-        <Categories />
-      </View>
-      <Banner />
       <Products />
-      
     </DefaultLayout>
   );
 };
