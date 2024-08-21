@@ -12,6 +12,10 @@ import DefaultLayout from "../components/Layout/DefaultLayout";
 import CustomInput from "../components/CustomerInput";
 import Footer from "../components/Layout/Footer";
 
+
+const register = () => {
+ console.log(`registered`); 
+}
 const CustomInputText = ({ text, value, onChangeValue }) => {
   return (
     <View style={{ margin: 10 }}>
@@ -30,7 +34,7 @@ const CustomInputText = ({ text, value, onChangeValue }) => {
 
 const CustomButton = () => {
   return (
-    <TouchableOpacity style={styles.button}>
+    <TouchableOpacity style={styles.button} onPress={register}>
       <Text style={styles.buttonText}>Register</Text>
     </TouchableOpacity>
   );

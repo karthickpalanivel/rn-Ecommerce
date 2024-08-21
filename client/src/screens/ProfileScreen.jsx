@@ -15,10 +15,6 @@ import LoginScreen from "./LoginScreen";
 
 
 
-const register = () => {
-  
-}
-
 const CustomInputText = ({ text, value, onChangeValue }) => {
   return (
     <View style={{ margin: 10 }}>
